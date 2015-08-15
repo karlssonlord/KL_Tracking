@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f659c2229483d1668b6c2206892e383f",
+    "hash": "f6a8e75ca424e87560fa6b27044dc9ce",
     "packages": [],
     "packages-dev": [
         {
@@ -55,41 +55,38 @@
             "time": "2015-06-16 10:17:07"
         },
         {
-            "name": "leaphub/phpcs-symfony2-standard",
-            "version": "v2.0.3",
-            "target-dir": "leaphub/phpcs/Symfony2",
+            "name": "magento-ecg/coding-standard",
+            "version": "1.2",
+            "target-dir": "Ecg",
             "source": {
                 "type": "git",
-                "url": "https://github.com/leaphub/phpcs-symfony2-standard.git",
-                "reference": "3a69d4c86585b474f434cc0422569f372038147c"
+                "url": "https://github.com/magento-ecg/coding-standard.git",
+                "reference": "d6f4aaeb36729b666b57e5457187f0d857bbdac9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/leaphub/phpcs-symfony2-standard/zipball/3a69d4c86585b474f434cc0422569f372038147c",
-                "reference": "3a69d4c86585b474f434cc0422569f372038147c",
+                "url": "https://api.github.com/repos/magento-ecg/coding-standard/zipball/d6f4aaeb36729b666b57e5457187f0d857bbdac9",
+                "reference": "d6f4aaeb36729b666b57e5457187f0d857bbdac9",
                 "shasum": ""
             },
             "require": {
-                "squizlabs/php_codesniffer": "~2.0"
+                "php": ">=5.4.0"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.1-dev"
-                }
-            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
-            "description": "A PHP_CodeSniffer standard for Symfony 2 applications",
-            "homepage": "https://github.com/leaphub/phpcs-symfony2-standard",
-            "keywords": [
-                "Coding Standard",
-                "phpcs",
-                "symfony 2"
+            "authors": [
+                {
+                    "name": "Magento Expert Consulting Group",
+                    "homepage": "http://magentocommerce.com/consulting",
+                    "role": "Maintainer"
+                }
             ],
-            "time": "2015-03-25 10:07:53"
+            "description": "A set of PHP_CodeSniffer rules and sniffs.",
+            "homepage": "https://github.com/magento-ecg/coding-standard",
+            "time": "2015-04-27 07:16:39"
         },
         {
             "name": "squizlabs/php_codesniffer",
