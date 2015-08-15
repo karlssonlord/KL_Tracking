@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <KL_Tracking>
+            <version>0.0.1</version>
+        </KL_Tracking>
+    </modules>
+    <global>
+        <blocks>
+            <kltracking>
+                <class>KL_Tracking_Block</class>
+            </kltracking>
+        </blocks>
+        <helpers>
+            <kltracking>
+                <class>KL_Tracking_Helper</class>
+            </kltracking>
+        </helpers>
+        <models>
+            <kltracking>
+                <class>KL_Tracking_Model</class>
+            </kltracking>
+        </models>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <kltracking module="kl_tracking">
+                    <file>kltracking.xml</file>
+                </kltracking>
+            </updates>
+        </layout>
+        <events>
+            <controller_action_predispatch>
+                <observers>
+                    <kltracking_cpd>
+                        <class>kltracking/observer</class>
+                        <method>controllerPreDispatch</method>
+                    </kltracking_cpd>
+                </observers>
+            </controller_action_predispatch>
+        </events>
+    </frontend>
+</config>

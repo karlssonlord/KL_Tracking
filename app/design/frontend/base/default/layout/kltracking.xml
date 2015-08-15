@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<layout>
+    <!-- Product page -->
+    <catalog_product_view>
+        <reference name="content">
+            <reference name="product.info">
+                <block type="kltracking/product" output="toHtml" name="kltracking_product"
+                       template="kltracking/product.phtml"/>
+            </reference>
+        </reference>
+    </catalog_product_view>
+
+    <!-- Category page -->
+    <catalog_category_default>
+        <reference name="content">
+            <block type="kltracking/category" output="toHtml" name="kltracking_product"
+                   template="kltracking/category.phtml"/>
+        </reference>
+    </catalog_category_default>
+
+    <!-- Checkout success page -->
+    <checkout_onepage_success>
+        <reference name="content">
+            <reference name="content">
+                <block type="kltracking/success" output="toHtml" name="kltracking_success"
+                       template="kltracking/success.phtml"/>
+            </reference>
+        </reference>
+    </checkout_onepage_success>
+
+    <!-- Klarna Checkout success page -->
+    <klklarna_checkout_success>
+        <reference name="content">
+            <reference name="content">
+                <block type="kltracking/success" output="toQuoteHtml" name="kltracking_success"
+                       template="kltracking/success.phtml"/>
+            </reference>
+        </reference>
+    </klklarna_checkout_success>
+
+</layout>
