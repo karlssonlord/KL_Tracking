@@ -1,0 +1,14 @@
+{
+    "name": "kl/tracking",
+    "require-dev": {
+        "jakub-onderka/php-parallel-lint": "0.*",
+        "squizlabs/php_codesniffer": "2.*",
+        "leaphub/phpcs-symfony2-standard": "~2.0.0"
+    },
+    "authors": [
+        {
+            "name": "Robert Lord",
+            "email": "robert@karlssonlord.com"
+        }
+    ]
+}
