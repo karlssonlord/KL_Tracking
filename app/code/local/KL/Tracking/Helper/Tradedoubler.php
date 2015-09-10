@@ -84,7 +84,7 @@ class KL_Tracking_Helper_Tradedoubler extends Mage_Core_Helper_Abstract
      *
      * @param $orderNumber
      * @param $amountExcludingVat
-     * @parma $amountIncludingVat
+     * @param $amountIncludingVat
      * @param $currency
      *
      * @return string

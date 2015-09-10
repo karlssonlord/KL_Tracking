@@ -11,28 +11,6 @@ class KL_Tracking_Block_Success extends KL_Tracking_Block_Abstract
     protected $order = null;
 
     /**
-     * When calling "toHtml" use the actual order
-     *
-     * @return string
-     */
-    public function _toHtml()
-    {
-        $this->setData('lookfor', 'order');
-        return parent::_toHtml();
-    }
-
-    /**
-     * When calling "toQuoteHtml" use the quote object
-     *
-     * @return string
-     */
-    public function toQuoteHtml()
-    {
-        $this->setData('lookfor', 'quote');
-        return parent::_toHtml();
-    }
-
-    /**
      * Return the order or quote object
      *
      * @return null
@@ -87,28 +65,74 @@ class KL_Tracking_Block_Success extends KL_Tracking_Block_Abstract
         return $this->getOrder()->getId();
     }
 
-    public function getOrderValueExcluding()
+    /**
+     * Total order value excluding tax
+     *
+     * @return float
+     */
+    public function getOrderValueExcludingTax()
     {
+        /**
+         * Assure it's an object
+         */
+        if (!is_object($this->getOrder())) {
+            return null;
+        }
+
+        return ($this->getOrderValueIncludingTax() - $this->getOrder()->getTaxAmount());
     }
 
+    /**
+     * Total order value including tax
+     *
+     * @return float
+     */
     public function getOrderValueIncludingTax()
     {
+        /**
+         * Assure it's an object
+         */
+        if (!is_object($this->getOrder())) {
+            return null;
+        }
+
+        return floatval($this->getOrder()->getGrandTotal());
     }
 
+    /**
+     * Order currency code
+     *
+     * @return string
+     */
     public function getOrderCurrency()
     {
+        /**
+         * Assure it's an object
+         */
+        if (!is_object($this->getOrder())) {
+            return null;
+        }
+
+        return (string)$this->getOrder()->getOrderCurrencyCode();
     }
 
+    /**
+     * Fetch TradeDoubler tracking pixel
+     *
+     * @return string
+     */
     public function getTradedoublerTrackingPixelURL()
     {
         /**
-         * Temporary disabled function
+         * Assure it's an object
          */
-        return '';
+        if (!is_object($this->getOrder())) {
+            return null;
+        }
 
         return Mage::helper('kltracking/tradedoubler')->getTradedoublerTrackingPixelURL(
             $this->getOrderNumber(),
-            $this->getOrderValueExcluding(),
+            $this->getOrderValueExcludingTax(),
             $this->getOrderValueIncludingTax(),
             $this->getOrderCurrency()
         );

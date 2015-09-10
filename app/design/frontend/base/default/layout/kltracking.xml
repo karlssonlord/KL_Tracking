@@ -4,7 +4,7 @@
     <catalog_product_view>
         <reference name="content">
             <reference name="product.info">
-                <block type="kltracking/product" output="toHtml" name="kltracking_product"
+                <block type="kltracking/product" name="kltracking_product"
                        template="kltracking/product.phtml"/>
             </reference>
         </reference>
@@ -13,7 +13,7 @@
     <!-- Category page -->
     <catalog_category_default>
         <reference name="content">
-            <block type="kltracking/category" output="toHtml" name="kltracking_product"
+            <block type="kltracking/category" name="kltracking_product"
                    template="kltracking/category.phtml"/>
         </reference>
     </catalog_category_default>
@@ -22,8 +22,12 @@
     <checkout_onepage_success>
         <reference name="content">
             <reference name="content">
-                <block type="kltracking/success" output="toHtml" name="kltracking_success"
-                       template="kltracking/success.phtml"/>
+                <block type="kltracking/success" name="kltracking_success" template="kltracking/success.phtml">
+                    <action method="setData">
+                        <name>lookfor</name>
+                        <value>order</value>
+                    </action>
+                </block>
             </reference>
         </reference>
     </checkout_onepage_success>
@@ -32,8 +36,12 @@
     <klklarna_checkout_success>
         <reference name="content">
             <reference name="content">
-                <block type="kltracking/success" output="toQuoteHtml" name="kltracking_success"
-                       template="kltracking/success.phtml"/>
+                <block type="kltracking/success" name="kltracking_success" template="kltracking/success.phtml">
+                    <action method="setData">
+                        <name>lookfor</name>
+                        <value>quote</value>
+                    </action>
+                </block>
             </reference>
         </reference>
     </klklarna_checkout_success>
