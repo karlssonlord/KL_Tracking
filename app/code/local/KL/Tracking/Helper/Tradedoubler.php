@@ -104,7 +104,7 @@ class KL_Tracking_Helper_Tradedoubler extends Mage_Core_Helper_Abstract
          * Build the URL for the tracking pixel
          */
         $url = [
-            'http://tbs.tradedoubler.com/report',
+            'https://tbs.tradedoubler.com/report',
             '?organization=' . $this->getOrganisation(),
             '&event=' . $this->getEvent(),
             '&orderNumber=' . $orderNumber,
