@@ -46,17 +46,17 @@ class KL_Tracking_Block_Success extends KL_Tracking_Block_Abstract
         }
 
         /**
-         * Return the increment ID
-         */
-        if ($this->getOrder()->getIncrementId()) {
-            return $this->getOrder()->getIncrementId();
-        }
-
-        /**
          * Return the reserved order ID when looking at a quote
          */
         if ($this->getOrder()->getReservedOrderId()) {
             return $this->getOrder()->getReservedOrderId();
+        }
+
+        /**
+         * Return the increment ID
+         */
+        if ($this->getOrder()->getIncrementId()) {
+            return $this->getOrder()->getIncrementId();
         }
 
         /**
