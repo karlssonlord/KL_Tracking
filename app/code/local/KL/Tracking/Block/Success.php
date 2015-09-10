@@ -113,7 +113,19 @@ class KL_Tracking_Block_Success extends KL_Tracking_Block_Abstract
             return null;
         }
 
-        return (string)$this->getOrder()->getOrderCurrencyCode();
+        /**
+         * Fetch currency from order
+         */
+        $currency = (string)$this->getOrder()->getOrderCurrencyCode();
+
+        /**
+         * If no currency were found, try the value stored on quotes
+         */
+        if (!trim($currency)) {
+            $currency = (string)$this->getOrder()->getQuoteCurrencyCode();
+        }
+
+        return $currency;
     }
 
     /**
