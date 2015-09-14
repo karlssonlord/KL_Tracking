@@ -149,4 +149,27 @@ class KL_Tracking_Block_Success extends KL_Tracking_Block_Abstract
             $this->getOrderCurrency()
         );
     }
+
+    /**
+     * Fetch customer ID from order or quote
+     *
+     * @return int
+     */
+    public function getCustomerId()
+    {
+        /**
+         * Assure it's an object
+         */
+        if (!is_object($this->getOrder())) {
+            return 0;
+        }
+
+        $customerId = $this->getOrder()->getCustomerId();
+
+        if (!$customerId) {
+            return 0;
+        }
+
+        return $customerId;
+    }
 }

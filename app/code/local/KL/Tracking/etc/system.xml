@@ -64,6 +64,15 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </cj>
+                        <zanox translate="label">
+                            <label>Zanox</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </zanox>
                     </fields>
                 </integrations>
                 <tradedoubler>
@@ -104,6 +113,106 @@
                         </price_include_vat>
                     </fields>
                 </tradedoubler>
+                <zanox>
+                    <label>Zanox</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>30</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <partner_id translate="label">
+                            <label>Partner ID</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Partner ID provided by Zanox</comment>
+                        </partner_id>
+                        <home_page_mastertag_code translate="label">
+                            <label>Home Page Mastertag Code</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Home Page Mastertag Code provided by Zanox</comment>
+                        </home_page_mastertag_code>
+                        <generic_page_mastertag_code translate="label">
+                            <label>Generic Page Mastertag Code</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Generic Page Mastertag Code provided by Zanox</comment>
+                        </generic_page_mastertag_code>
+                        <category_page_mastertag_code translate="label">
+                            <label>Category Page Mastertag Code</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Category Page Mastertag Code provided by Zanox</comment>
+                        </category_page_mastertag_code>
+                        <product_page_mastertag_code translate="label">
+                            <label>Product Page Mastertag Code</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Product Page Mastertag Code provided by Zanox</comment>
+                        </product_page_mastertag_code>
+                        <search_page_mastertag_code translate="label">
+                            <label>Search Page Mastertag Code</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Search Page Mastertag Code provided by Zanox</comment>
+                        </search_page_mastertag_code>
+                        <registration_page_mastertag_code translate="label">
+                            <label>Registration Page Mastertag Code</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Registration Page Mastertag Code provided by Zanox</comment>
+                        </registration_page_mastertag_code>
+                        <basket_page_mastertag_code translate="label">
+                            <label>Basket Page Mastertag Code</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>80</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Basket Page Mastertag Code provided by Zanox</comment>
+                        </basket_page_mastertag_code>
+                        <checkout_page_mastertag_code translate="label">
+                            <label>Checkout Page Mastertag Code</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>90</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Checkout Page Mastertag Code provided by Zanox</comment>
+                        </checkout_page_mastertag_code>
+                        <success_page_mastertag_code translate="label">
+                            <label>Success Page Mastertag Code</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Success Page Mastertag Code provided by Zanox</comment>
+                        </success_page_mastertag_code>
+                    </fields>
+                </zanox>
             </groups>
         </kltracking>
     </sections>

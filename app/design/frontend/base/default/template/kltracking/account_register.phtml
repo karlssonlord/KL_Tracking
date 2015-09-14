@@ -1,9 +1,9 @@
 <?php if ($this->isEnabled('zanox')): ?>
-    <!-- Start of Category Page Mastertag Code: -->
-    <div class="zx_<?php print $this->getIntegrationConfig('zanox', 'category_page_mastertag_code'); ?> zx_mediaslot">
+    <!-- Start of Registration Page Mastertag Code: -->
+    <div class="zx_<?php print $this->getIntegrationConfig('zanox', 'registration_page_mastertag_code'); ?> zx_mediaslot">
         <script type="text/javascript">
             window._zx = window._zx || [];
-            window._zx.push({"id":"<?php print $this->getIntegrationConfig('zanox', 'category_page_mastertag_code'); ?>"});
+            window._zx.push({"id":"<?php print $this->getIntegrationConfig('zanox', 'registration_page_mastertag_code'); ?>"});
             (function(d) {
                 var s = d.createElement("script"); s.async = true;
                 s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//static.zanox.com/scripts/zanox.js";
@@ -11,5 +11,5 @@
             }(document));
         </script>
     </div>
-    <!-- End of Category Page Mastertag Code -->
+    <!-- End of Registration Page Mastertag Code -->
 <?php endif; ?>
