@@ -1,22 +1,50 @@
 <?xml version="1.0"?>
 <layout>
+
+    <!-- Cms page -->
+
+    <!-- Customer account create -->
+    <customer_account_create>
+
+    </customer_account_create>
+
+    <!-- Fontpage -->
+    <cms_index_index>
+        <reference name="content">
+            <block type="kltracking/frontpage" name="kltracking_frontpage"
+                   template="kltracking/frontpage.phtml"/>
+        </reference>
+    </cms_index_index>
+
     <!-- Product page -->
     <catalog_product_view>
         <reference name="content">
-            <reference name="product.info">
-                <block type="kltracking/product" name="kltracking_product"
-                       template="kltracking/product.phtml"/>
-            </reference>
+            <block type="kltracking/product" name="kltracking_product"
+                   template="kltracking/product.phtml"/>
         </reference>
     </catalog_product_view>
 
     <!-- Category page -->
     <catalog_category_default>
         <reference name="content">
-            <block type="kltracking/category" name="kltracking_product"
+            <block type="kltracking/category" name="kltracking_category"
                    template="kltracking/category.phtml"/>
         </reference>
     </catalog_category_default>
+    <catalog_category_layered>
+        <reference name="content">
+            <block type="kltracking/category" name="kltracking_category"
+                   template="kltracking/category.phtml"/>
+        </reference>
+    </catalog_category_layered>
+
+    <!-- Onepage checkout -->
+    <checkout_onepage_index>
+        <reference name="content">
+            <block type="kltracking/checkout" name="kltracking_checkout"
+                   template="kltracking/checkout.phtml"/>
+        </reference>
+    </checkout_onepage_index>
 
     <!-- Checkout success page -->
     <checkout_onepage_success>
