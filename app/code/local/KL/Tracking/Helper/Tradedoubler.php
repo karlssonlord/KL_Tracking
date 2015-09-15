@@ -92,6 +92,13 @@ class KL_Tracking_Helper_Tradedoubler extends Mage_Core_Helper_Abstract
     public function getTradedoublerTrackingPixelURL($orderNumber, $amountExcludingVat, $amountIncludingVat, $currency)
     {
         /**
+         * Assure we are tracking the person
+         */
+        if (!$this->getTduid()) {
+            return '';
+        }
+
+        /**
          * Set the correct amount
          */
         if ($this->priceShouldIncludeVat()) {
