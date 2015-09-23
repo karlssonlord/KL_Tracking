@@ -2,6 +2,10 @@
     <!-- Start of Category Page Mastertag Code: -->
     <div class="zx_<?php print $this->getIntegrationConfig('zanox', 'category_page_mastertag_code'); ?> zx_mediaslot">
         <script type="text/javascript">
+            <?php if ($this->getCurrentCategory() && is_object($this->getCurrentCategory())): ?>
+            var zx_category = "<?php print $this->getCurrentCategory()->getName(); ?>";
+            <?php endif; ?>
+
             window._zx = window._zx || [];
             window._zx.push({"id":"<?php print $this->getIntegrationConfig('zanox', 'category_page_mastertag_code'); ?>"});
             (function(d) {

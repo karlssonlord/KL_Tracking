@@ -12,6 +12,6 @@ class KL_Tracking_Block_Category extends KL_Tracking_Block_Abstract
      */
     public function getCurrentCategory()
     {
-        return Mage::registry('current_product');
+        return Mage::registry('current_category');
     }
 }
