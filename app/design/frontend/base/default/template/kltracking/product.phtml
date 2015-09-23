@@ -2,6 +2,16 @@
     <!-- Start of Product Page Mastertag Code: -->
     <div class="zx_<?php print $this->getIntegrationConfig('zanox', 'product_page_mastertag_code'); ?> zx_mediaslot">
         <script type="text/javascript">
+            <?php if ($this->getCurrentProduct() && is_object($this->getCurrentProduct())): ?>
+            var zx_identifier ="<?php print $this->getCurrentProduct()->getSku(); ?>";
+            var zx_fn = "<?php print $this->getCurrentProduct()->getName(); ?>";
+            var zx_description = "<?php print $this->getStrippedShortDescription(); ?>";
+            var zx_amount ="<?php print $this->getPriceExlcudingTax(); ?>";
+            var zx_currency = "SEK";
+            var zx_url = "<?php print Mage::helper('core/url')->getCurrentUrl(); ?>";
+            var zx_photo = "<?php print (string)Mage::helper('catalog/image')->init($this->getCurrentProduct(), 'image')->resize(250); ?>";
+            <?php endif; ?>
+
             window._zx = window._zx || [];
             window._zx.push({"id":"<?php print $this->getIntegrationConfig('zanox', 'product_page_mastertag_code'); ?>"});
             (function(d) {
