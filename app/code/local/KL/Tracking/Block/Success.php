@@ -100,6 +100,16 @@ class KL_Tracking_Block_Success extends KL_Tracking_Block_Abstract
     }
 
     /**
+     * This will return only the value of the products excluding tax
+     *
+     * @return float
+     */
+    public function getOrderValueProductsOnlyExclTax()
+    {
+        return ($this->getOrderValueExcludingTax() - $this->getOrder()->getShippingAmount());
+    }
+
+    /**
      * Order currency code
      *
      * @return string

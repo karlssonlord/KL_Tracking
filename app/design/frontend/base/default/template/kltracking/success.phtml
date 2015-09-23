@@ -9,7 +9,7 @@
     <script type="text/javascript" src="https://ad.zanox.com/pps/?<?php print $this->getIntegrationConfig('zanox', 'success_page_mastertag_code'); ?>&mode=[[1]]&CID=[[XXX]]&CustomerID=<?php print $this->getCustomerId(); ?>&OrderID=<?php print $this->getOrderNumber(); ?>?>&CurrencySymbol=<?php print $this->getOrderCurrency(); ?>&TotalPrice=<?php print str_replace('.', ',', $this->getOrderValueIncludingTax()); ?>&PartnerID=<?php print $this->getIntegrationConfig('zanox', 'partner_id'); ?>">
     </script>
     <noscript>
-        <img src="https://ad.zanox.com/pps/?<?php print $this->getIntegrationConfig('zanox', 'success_page_mastertag_code'); ?>&mode=[[2]]&CID=[[XXX]]&CustomerID=<?php print $this->getCustomerId(); ?>&OrderID=<?php print $this->getOrderNumber(); ?>&CurrencySymbol=<?php print $this->getOrderCurrency(); ?>&TotalPrice=<?php print str_replace('.', ',', $this->getOrderValueIncludingTax()); ?>&PartnerID=<?php print Mage::helper('kltracking/zanox')->getPartnerId(); ?>" width="1" height="1" />
+        <img src="https://ad.zanox.com/pps/?<?php print $this->getIntegrationConfig('zanox', 'success_page_mastertag_code'); ?>&mode=[[2]]&CID=[[XXX]]&CustomerID=<?php print $this->getCustomerId(); ?>&OrderID=<?php print $this->getOrderNumber(); ?>&CurrencySymbol=<?php print $this->getOrderCurrency(); ?>&TotalPrice=<?php print str_replace('.', ',', $this->getOrderValueProductsOnlyExclTax()); ?>&PartnerID=<?php print Mage::helper('kltracking/zanox')->getPartnerId(); ?>" width="1" height="1" />
     </noscript>
     <!-- END zanox-affiliate HTML-Code -->
 <?php endif; ?>
