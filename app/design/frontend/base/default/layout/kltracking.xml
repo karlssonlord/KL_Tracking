@@ -24,6 +24,20 @@
         </reference>
     </catalog_product_view>
 
+    <!-- Search result page -->
+    <catalogsearch_result_index>
+        <reference name="content">
+            <block type="kltracking/search" name="kltracking_search"
+                   template="kltracking/search.phtml"/>
+        </reference>
+    </catalogsearch_result_index>
+    <catalogsearch_advanced_result>
+        <reference name="content">
+            <block type="kltracking/search" name="kltracking_search"
+                   template="kltracking/search.phtml"/>
+        </reference>
+    </catalogsearch_advanced_result>
+
     <!-- Category page -->
     <catalog_category_default>
         <reference name="content">

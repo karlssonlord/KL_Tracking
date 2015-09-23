@@ -1,7 +1,10 @@
 <?php if ($this->isEnabled('zanox')): ?>
 <!-- Start of Search Page Mastertag Code: -->
 <div class="zx_<?php print $this->getIntegrationConfig('zanox', 'search_page_mastertag_code'); ?> zx_mediaslot">
+
     <script type="text/javascript">
+        var zx_search_query = "<?php print $this->getQueryString(); ?>";
+        
         window._zx = window._zx || [];
         window._zx.push({"id":"<?php print $this->getIntegrationConfig('zanox', 'search_page_mastertag_code'); ?>"});
         (function(d) {
