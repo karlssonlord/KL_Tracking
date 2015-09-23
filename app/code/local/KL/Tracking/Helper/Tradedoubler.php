@@ -27,7 +27,7 @@ class KL_Tracking_Helper_Tradedoubler extends Mage_Core_Helper_Abstract
         if (Mage::app()->getRequest()->getParam($this->cookieName)) {
             $cookie = Mage::getSingleton('core/cookie');
             $cookie->set(
-                'tduid',
+                $this->cookieName,
                 Mage::app()->getRequest()->getParam('tduid'),
                 time() + ($this->cookieLifetime * 86400),
                 '/'
