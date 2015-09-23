@@ -19,6 +19,11 @@ class KL_Tracking_Model_Observer
          */
         Mage::helper('kltracking/tradedoubler')->controllerPreDispatch();
 
+        /**
+         * Allow Zanox to handle it's magic
+         */
+        Mage::helper('kltracking/zanox')->controllerPreDispatch();
+
         return $observer;
     }
 }
