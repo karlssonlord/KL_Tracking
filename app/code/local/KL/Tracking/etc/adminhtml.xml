@@ -8,7 +8,7 @@
                         <children>
                             <config>
                                 <children>
-                                    <kltracking translate="title" module="tracking">
+                                    <kltracking translate="title" module="kltracking">
                                         <title>KL Tracking</title>
                                         <sort_order>0</sort_order>
                                     </kltracking>
