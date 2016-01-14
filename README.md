@@ -1,5 +1,11 @@
 # KL_Tracking
 
+## Trade Doubler
+
+### Redirect
+
+https://domain.tld/kl_tracking/tradedoubler
+
 ## Todo
 
 We need to implement logic to display the following templates:

@@ -1,6 +1,17 @@
 <?xml version="1.0"?>
 <layout>
 
+    <!-- Tradedoubler redirect page -->
+    <tracking_tradedoubler_index>
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+        <reference name="content">
+            <block type="tracking/index" name="tracking_index" template="tracking/index.phtml"/>
+        </reference>
+    </tracking_tradedoubler_index>
+
+
     <!-- Cms page -->
 
     <!-- Customer account create -->

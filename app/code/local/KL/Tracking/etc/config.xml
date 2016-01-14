@@ -23,6 +23,15 @@
         </models>
     </global>
     <frontend>
+        <routers>
+            <tracking>
+                <use>standard</use>
+                <args>
+                    <module>KL_Tracking</module>
+                    <frontName>kl_tracking</frontName>
+                </args>
+            </tracking>
+        </routers>
         <layout>
             <updates>
                 <kltracking module="kl_tracking">
