@@ -16,6 +16,16 @@ class KL_Tracking_Helper_Tradedoubler extends Mage_Core_Helper_Abstract
     protected $cookieName = 'tduid';
 
     /**
+     * Fetch the cookie name
+     *
+     * @return string
+     */
+    public function getCookieName()
+    {
+        return $this->cookieName;
+    }
+
+    /**
      * Handle the event controller_action_predispatch
      * This will be used to save the "tduid" cookie for the user if provided
      */

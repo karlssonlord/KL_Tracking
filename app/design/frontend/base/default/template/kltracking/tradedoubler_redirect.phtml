@@ -83,6 +83,6 @@
 
     var mytduid = getVar('tduid');
 
-    setCookie('TRADEDOUBLER', mytduid, 365, '/');
+    setCookie('<?php print Mage::helper('kltracking/tradedoubler')->getCookieName(); ?>', mytduid, 365, '/');
     window.location = redirTo();
 </script>
