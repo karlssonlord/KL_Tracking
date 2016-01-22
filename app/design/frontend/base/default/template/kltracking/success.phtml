@@ -16,6 +16,6 @@
 
 <?php if ($this->isEnabled('cj')): ?>
     <!-- CJ Affiliate By Conversant Conversion Tag - Do not remove -19-Jan-2016 -->
-    <img src="https://www.emjcd.com/u?CID=1510362&OID=<?php print $this->getOrderNumber(); ?>&TYPE=323040&AMOUNT=<?php print str_replace('.', ',', $this->getOrderValueProductsOnlyExclTax()); ?>&CURRENCY=<?php print $this->getOrderCurrency(); ?>&METHOD=IMG" height="1" width="20">
+    <img src="https://www.emjcd.com/u?CID=<?php print $this->getIntegrationConfig('cj', 'cid'); ?>&OID=<?php print $this->getOrderNumber(); ?>&TYPE=323040&AMOUNT=<?php print str_replace('.', ',', $this->getOrderValueProductsOnlyExclTax()); ?>&CURRENCY=<?php print $this->getOrderCurrency(); ?>&METHOD=IMG" height="1" width="20">
     <!-- End CJ Affiliate By Conversant Conversion Tag -->
 <?php endif; ?>

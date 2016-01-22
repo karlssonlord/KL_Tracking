@@ -204,6 +204,19 @@
                         </success_page_mastertag_code>
                     </fields>
                 </zanox>
+                <cj>
+                    <fields>
+                        <cid translate="label">
+                            <label>CID</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>CID provided by CJ</comment>
+                        </cid>
+                    </fields>
+                </cj>
             </groups>
         </kltracking>
     </sections>
